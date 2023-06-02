@@ -23,7 +23,7 @@ export default function Cart() {
         setProducts(jsonData.data)
     }
 
-    useEffect(() => {getProducts()},[JSON.stringify(products)])
+    useEffect(() => {getProducts()},[JSON.stringify(products),getProducts],)
 
     function getTotal() {
         if (!products.length) return 0;
