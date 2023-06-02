@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import apiURL from '@/apiURL';
 
-const login = () => {
+const Login = () => {
 
     const userRef = useRef();
     const passRef = useRef();
@@ -27,4 +27,4 @@ const login = () => {
     </form>
 }
 
-export default login
+export default Login
