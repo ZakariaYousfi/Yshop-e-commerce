@@ -6,7 +6,7 @@ const login = () => {
     const userRef = useRef();
     const passRef = useRef();
     
-    const Login = async (e) => {
+    const useLogin = async (e) => {
         e.preventDefault()
         const info = {
             username: userRef.current.value,
@@ -20,7 +20,7 @@ const login = () => {
         console.log(jsonData.data)
     }
 
-    return <form onSubmit = { Login } >
+    return <form onSubmit = { useLogin } >
         username :  <input ref = {userRef} style = {{margin:'5px'}}></input><br/>
         password : <input ref = {passRef} style = {{margin:'5px'}}></input><br/>
         <button type = "submit" style={{align:'center'}}>Login</button>
