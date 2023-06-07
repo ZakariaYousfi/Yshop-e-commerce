@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
 const UserContext = createContext({
-    items: {},setItems: () => {},
+    info: {},setInfo: () => {},
 });
 
-export default CartContext;
+export default UserContext;

@@ -1,13 +1,15 @@
 
 import Link from 'next/link';
-import { Flex, Box, Button, Text } from '@chakra-ui/react';
+import { Flex, Box, Button, Text, Image } from '@chakra-ui/react';
 import { MdShoppingCart } from 'react-icons/md';
 import {useContext} from 'react'
 import CartContext from '@/state/Cart';
+import UserContext from '@/state/User';
 
 export default function NavBar() {
 
 const {items} = useContext(CartContext)
+const {info} = useContext(UserContext)
 
 const itemsCount = Object
                     .values(items)
@@ -18,10 +20,9 @@ bgColor="white" boxShadow="md">
 <Flex width="container.xl" m="auto" p="5"
 justifyContent="space-between">
 <Link href="/" passHref>
-<Text textColor="blue.800" fontWeight="bold"
-fontSize="2xl">
-Shop
-</Text>
+<Image src='https://i.imgur.com/UIeEkqh.png' alt='Yshop' width = '100px' height = '50px' />
+{//<Text textColor="blue.800" fontWeight="bold" fontSize="2xl"> Shop </Text>
+}
 </Link>
 <Box>
 <Link href="/about" passHref>
@@ -35,7 +36,7 @@ About us
 <Link href="/login" passHref>
 <Text textColor="blue.800" fontWeight="bold"
 fontSize="2xl" >
-Login/Signup
+{info.id ? info.username : 'Login/Signup'}
 </Text>
 </Link>
 </Box>

@@ -23,22 +23,22 @@ export default function Cart() {
         setProducts(jsonData.data)
     }
 
-    useEffect(() => {getProducts()},[JSON.stringify(products),getProducts],)
+    useEffect(() => {getProducts()},[JSON.stringify(products)],)
 
     function getTotal() {
         if (!products.length) return 0;
         return Object.keys(items)
         .map(
-        (id) => {
+        (id) => 
         products.find((product) => product.id == id).price
-        * (items[id] / 100) // Stripe requires the prices to be
+        * (items[id]) // Stripe requires the prices to be
         // integers (i.e., €4.99 should be
         // written as 499). That's why
         // we need to divide by 100 the prices
         // we get from GraphCMS, which are
         // already in the correct
         // Stripe format
-    }).reduce((x, y) => x + y)
+    ).reduce((x, y) => x + y)
         //.toFixed(2);
         }
 
@@ -80,7 +80,7 @@ export default function Cart() {
             </Box>
             <Box>
             €{(items[product.id] *
-            (product.price / 100)).toFixed(2)}
+            (product.price)).toFixed(2)}
             </Box>
             </Flex>
             ))}
@@ -91,7 +91,9 @@ export default function Cart() {
             <Text fontSize="xl" fontWeight="bold">
             Total: €{getTotal()}
             </Text>
-            <Button colorScheme="blue"> Pay now </Button>
+            <br/>
+            <Button colorScheme="blue"> Pay online </Button>
+            <Button colorScheme="blue"><Link href = "/delivery" > Pay on delivery </Link></Button>
             </Flex>
             </>
             )}
