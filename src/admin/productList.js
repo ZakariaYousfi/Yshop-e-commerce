@@ -1,5 +1,5 @@
 
-import { List, Datagrid, TextField, DateField, BooleanField } from 'react-admin';
+import { List, Datagrid, TextField, DateField, BooleanField, Filter, TextInput } from 'react-admin';
 
 export const PostList = () => (
     <List {...props}  filters={<PostFilter/>} perPage={25}>

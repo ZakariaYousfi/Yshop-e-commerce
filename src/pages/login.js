@@ -43,7 +43,7 @@ const Login = () => {
         username :  <Input ref = {userRef} style = {{margin:'5px', border: '1px solid green'}}></Input><br/>
         password : <Input ref = {passRef} style = {{margin:'5px', border: '1px solid green'}}></Input><br/><br/>
         <Button type = "submit" style={{align:'right'}} colorScheme="green">Login</Button><br/><br/>
-        don't have an account yet? <Button onClick = { () => setSignIn(false) } colorScheme="blue" height = '40px' width = '60px'>Sign up</Button> </form> </>
+        don&apos;t have an account yet? <Button onClick = { () => setSignIn(false) } colorScheme="blue" height = '40px' width = '60px'>Sign up</Button> </form> </>
         :
         <><form onSubmit = { useLogin } >
         username :  <Input ref = {userRef} style = {{margin:'5px', border: '1px solid green'}}></Input><br/>
