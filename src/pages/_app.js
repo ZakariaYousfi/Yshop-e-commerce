@@ -9,7 +9,6 @@ export default function App({ Component, pageProps }) {
   
   const [items,setItems] = useState({});
   const [info,setInfo] = useState({})
-  console.log(Component)
   return <ChakraProvider>
                       <UserContext.Provider value = {{info, setInfo}}>                      
                       <CartContext.Provider value = {{ items, setItems }}>
