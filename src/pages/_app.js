@@ -5,6 +5,7 @@ import CartContext from '@/state/Cart'
 import UserContext from '@/state/User'
 import { useState } from 'react';
 
+// fix navbar interrupting the admin page
 export default function App({ Component, pageProps }) {
   
   const [items,setItems] = useState({});

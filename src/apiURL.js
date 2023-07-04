@@ -1,4 +1,4 @@
 
-const baseURL = 'https://yousfi-commerce.vercel.app/'
+const baseURL = 'http://localhost:3000/'
 
 export default baseURL
